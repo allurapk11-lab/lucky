@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Mobile Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcf6f5;
+        }
+
+        /* Mobile Banner Container */
+        .mobile-banner-container {
+            width: 100%;
+            max-width: 480px;
+            margin: 15px auto 10px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .mobile-banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+        }
+
+        .banner-btn {
+            background-color: #d4838d;
+            color: white;
+            padding: 10px 24px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 25px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(212, 131, 141, 0.4);
+            display: inline-block;
+        }
+
+        /* About Me Laptop Desk Section Styling */
+        .about-laptop-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 15px auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 20px 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            border: 1px solid #f0e1e4;
+        }
+
+        .about-header-tag {
+            font-size: 10px;
+            color: #d4838d;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .about-heading {
+            font-size: 16px;
+            color: #4a3b3d;
+            font-weight: 800;
+            line-height: 1.3;
+            margin: 0 0 12px 0;
+        }
+
+        .about-desk-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fcf6f5;
+            margin-bottom: 12px;
+        }
+
+        .about-desk-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-desc {
+            font-size: 11px;
+            color: #7a6367;
+            line-height: 1.4;
+            margin: 0 0 15px 0;
+        }
+
+        .about-more-btn {
+            background-color: #d4838d;
+            color: white;
+            padding: 7px 18px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 8px rgba(212, 131, 141, 0.3);
+        }
+
+        /* 4 Detailed Feature Grid Inside About Section */
+        .about-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            border-top: 1px dashed #f0e1e4;
+            padding-top: 15px;
+        }
+
+        .about-feat-item {
+            background-color: #fcf6f5;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #f3d7dc;
+        }
+
+        .about-feat-icon {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .about-feat-title {
+            font-size: 11px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0 0 2px 0;
+        }
+
+        .about-feat-desc {
+            font-size: 9px;
+            color: #8c7376;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* 4 Aesthetic Pink Cards Grid Section */
+        .pink-cards-grid-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 15px auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .pink-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .pink-card-item {
+            background: linear-gradient(135deg, #f7abb5 0%, #f08e9c 100%);
+            border-radius: 12px;
+            padding: 25px 10px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(240, 142, 156, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .pink-card-text {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+
+        /* Moving Sticker Line Styling */
+        .sticker-ticker {
+            width: 100%;
+            max-width: 480px;
+            margin: 15px auto;
+            background-color: #fff0f3;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            border-top: 1px dashed #e8c5cb;
+            border-bottom: 1px dashed #e8c5cb;
+        }
+
+        .ticker-track {
+            display: inline-block;
+            animation: scrollText 15s linear infinite;
+        }
+
+        .sticker-item {
+            display: inline-block;
+            font-size: 16px;
+            padding: 0 15px;
+            color: #8c5a63;
+            font-weight: 500;
+        }
+
+        @keyframes scrollText {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Features Section Styling */
+        .features-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 15px auto;
+            background-color: #ffffff;
+            padding: 15px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            box-sizing: border-box;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+        }
+
+        .feature-text h4 {
+            margin: 0;
+            font-size: 12px;
+            color: #4a3b3d;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .feature-text p {
+            margin: 2px 0 0 0;
+            font-size: 10px;
+            color: #8c7376;
+        }
+
+        /* Shop By Category Section Styling */
+        .category-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #4a3b3d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .category-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+        }
+
+        .category-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-item {
+            text-align: center;
+            flex-shrink: 0;
+            width: 75px;
+            text-decoration: none;
+        }
+
+        .category-circle {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9e3e6;
+            margin-bottom: 6px;
+            border: 2px solid #f3d1d7;
+        }
+
+        .category-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-name {
+            font-size: 11px;
+            color: #5a4548;
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .category-shop {
+            font-size: 9px;
+            color: #a67c83;
+            margin: 2px 0 0 0;
+        }
+
+        /* Best Sellers Product Cards Section Styling (10 Cards) */
+        .products-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .product-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+        }
+
+        .product-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-card {
+            width: 135px;
+            flex-shrink: 0;
+            background: #fff;
+            border: 1px solid #f0e1e4;
+            border-radius: 12px;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .product-img-box {
+            width: 100%;
+            height: 125px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fcf6f5;
+            margin-bottom: 8px;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-name {
+            font-size: 11px;
+            color: #4a3b3d;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-price-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .product-price {
+            font-size: 11px;
+            color: #d4838d;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .product-old-price {
+            font-size: 9px;
+            color: #a6a6a6;
+            text-decoration: line-through;
+            margin: 0;
+        }
+
+        .product-rating {
+            font-size: 10px;
+            color: #e6b800;
+        }
+
+        .product-rating span {
+            color: #8c7376;
+            font-size: 9px;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background-color: #ff5c5c;
+            color: white;
+            font-size: 9px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #d4838d;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* --- OUR PROMISE SECTION STYLING --- */
+        .our-promise-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #f0e1e4;
+        }
+
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .promise-item {
+            text-align: center;
+            background-color: #fcf6f5;
+            padding: 12px 4px;
+            border-radius: 10px;
+            border: 1px solid #f3d7dc;
+        }
+
+        .promise-icon-box {
+            font-size: 22px;
+            margin-bottom: 6px;
+            color: #d4838d;
+        }
+
+        .promise-text {
+            font-size: 10px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* --- CUSTOMER REVIEWS SECTION STYLING --- */
+        .reviews-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            border: 1px solid #f0e1e4;
+        }
+
+        .reviews-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+            margin-top: 15px;
+        }
+
+        .reviews-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .review-card {
+            width: 200px;
+            flex-shrink: 0;
+            background-color: #fcf6f5;
+            border: 1px solid #f3d7dc;
+            border-radius: 12px;
+            padding: 12px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-stars {
+            color: #e6b800;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .review-text {
+            font-size: 10px;
+            color: #6e5659;
+            line-height: 1.4;
+            margin: 0 0 10px 0;
+            font-style: italic;
+        }
+
+        .review-author {
+            font-size: 10px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .review-verified {
+            font-size: 8px;
+            color: #d4838d;
+            margin-top: 2px;
+        }
+
+        /* --- FAQ SECTION STYLING --- */
+        .faq-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            border: 1px solid #f0e1e4;
+        }
+
+        .faq-accordion {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .faq-item {
+            background-color: #fcf6f5;
+            border: 1px solid #f3d7dc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            color: #4a3b3d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .faq-question span {
+            font-size: 14px;
+            color: #d4838d;
+            font-weight: 800;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 15px;
+            font-size: 10px;
+            color: #7a6367;
+            line-height: 1.4;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 150px;
+            padding: 0 15px 12px 15px;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        /* --- WHY CHOOSE LUCKY SCOOP SECTION STYLING --- */
+        .why-choose-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            border: 1px solid #f0e1e4;
+            text-align: center;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .why-choose-item {
+            background-color: #fcf6f5;
+            border: 1px solid #f3d7dc;
+            border-radius: 10px;
+            padding: 14px 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .why-choose-icon {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .why-choose-heading {
+            font-size: 11px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            text-transform: uppercase;
+        }
+
+        .why-choose-desc {
+            font-size: 9px;
+            color: #7a6367;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        /* Two Promotional Banners Section Styling */
+        .promo-banners-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            display: flex;
+            gap: 10px;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .promo-banner-card {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 12px 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid #f0e1e4;
+        }
+
+        .promo-tag {
+            font-size: 8px;
+            color: #a67c83;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .promo-title {
+            font-size: 11px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .promo-img-box {
+            width: 100%;
+            height: 70px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            background-color: #fcf6f5;
+        }
+
+        .promo-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .promo-btn {
+            background-color: #d4838d;
+            color: white;
+            padding: 5px 12px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        /* Cute Greeting Card Section Styling */
+        .greeting-card-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 15px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #f0e1e4;
+        }
+
+        .greeting-img-box {
+            width: 100%;
+            max-height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .greeting-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .greeting-text {
+            font-size: 12px;
+            color: #8c5a63;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Large Grid Product Cards Section (10 Cards) */
+        .large-cards-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .large-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .large-card {
+            background: #fff;
+            border: 1px solid #f0e1e4;
+            border-radius: 12px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .large-card-img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fcf6f5;
+            margin-bottom: 8px;
+        }
+
+        .large-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .large-card-title {
+            font-size: 12px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+        }
+
+        .large-card-price {
+            font-size: 12px;
+            color: #d4838d;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .large-card-btn {
+            background-color: #d4838d;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            font-size: 10px;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Aesthetic Banner Section (rt.jpg) */
+        .aesthetic-banner-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .aesthetic-banner-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        /* Sale Banner Strip */
+        .sale-banner-strip {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #8c5a63;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .sale-banner-strip h3 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Free Gift Banner Section Styling */
+        .free-gift-banner {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #f3abb5 0%, #e88796 100%);
+            border-radius: 14px;
+            padding: 22px 15px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 6px 15px rgba(212, 131, 141, 0.3);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .free-gift-banner h2 {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .free-gift-btn {
+            background-color: #ffffff;
+            color: #8c5a63;
+            padding: 8px 22px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 4 Easy Steps Section Styling */
+        .easy-steps-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 22px 12px;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #f0e1e4;
+        }
+
+        .easy-steps-title {
+            font-size: 14px;
+            color: #d4838d;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 18px 0;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            gap: 5px;
+        }
+
+        .step-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-icon-circle {
+            width: 42px;
+            height: 42px;
+            background-color: #fcf6f5;
+            border: 1.5px dashed #d4838d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px auto;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(212,131,141,0.15);
+        }
+
+        .step-heading {
+            font-size: 11px;
+            color: #4a3b3d;
+            font-weight: 700;
+            margin: 0 0 3px 0;
+        }
+
+        .step-desc {
+            font-size: 9px;
+            color: #8c7376;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .steps-line {
+            position: absolute;
+            top: 21px;
+            left: 15%;
+            right: 15%;
+            height: 1.5px;
+            border-top: 1.5px dashed #f0cbcd;
+            z-index: 1;
+        }
+
+        /* Why Girls Love Section Styling */
+        .why-girls-love-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .why-girls-subtitle {
+            font-size: 11px;
+            color: #d4838d;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .why-girls-title {
+            font-size: 16px;
+            color: #4a3b3d;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .why-girls-reasons {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+
+        .why-girls-reasons li {
+            font-size: 11px;
+            color: #6e5659;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .why-girls-btn {
+            background-color: #2b2325;
+            color: white;
+            padding: 8px 18px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .why-girls-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+        }
+
+        .why-girls-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .why-girls-card {
+            width: 110px;
+            flex-shrink: 0;
+            text-align: center;
+            background: #fcf6f5;
+            border: 1px solid #f0e1e4;
+            border-radius: 10px;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .why-girls-card-img {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 6px;
+            background-color: #ffffff;
+        }
+
+        .why-girls-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-girls-card-text {
+            font-size: 10px;
+            color: #4a3b3d;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* Cute Doll Image Section Styling */
+        .doll-image-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 15px 10px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #f0e1e4;
+        }
+
+        .doll-img-box {
+            width: 100%;
+            max-height: 420px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fcf6f5;
+        }
+
+        .doll-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* New Large Promotional Banners Section */
+        .large-promo-banners-section {
+            width: 100%;
+            max-width: 480px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .large-promo-banner {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(135deg, #fce4e8 0%, #f7d1d7 100%);
+            border: 1px solid #f0d5db;
+        }
+
+        .large-promo-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .large-promo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .large-promo-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .large-promo-tag {
+            font-size: 9px;
+            color: #d4838d;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .large-promo-heading {
+            font-size: 15px;
+            color: #4a3b3d;
+            font-weight: 800;
+            margin: 0 0 6px 0;
+            line-height: 1.3;
+        }
+
+        .large-promo-desc {
+            font-size: 11px;
+            color: #7a6367;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+        }
+
+        .large-promo-btn {
+            background-color: #d4838d;
+            color: white;
+            padding: 8px 22px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(212, 131, 141, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        .site-footer {
+  background-color: #3b2d2f; /* Aesthetic warm dark brownish-pink tone */
+  color: #f3e9eb;
+  padding: 60px 30px 25px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h2, .footer-col h3 {
+  color: #ffffff;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.footer-col.brand-col h2 {
+  font-size: 1.4rem;
+  text-transform: none;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  color: #d6c6c8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a, .footer-col ul.contact-list li {
+  color: #d6c6c8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.social-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 4px 4px 4px 15px;
+}
+
+.footer-form input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.88rem;
+  width: 100%;
+  outline: none;
+}
+
+.footer-form input::placeholder {
+  color: #bfaeb0;
+}
+
+.footer-form button {
+  background-color: #d47a86; /* Matching accent pink button */
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer-form button:hover {
+  background-color: #c06975;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  color: #bfaeb0;
+  font-size: 0.8rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-bottom-links a {
+  color: #bfaeb0;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #fff;
+}
+
+
+/* Announcement Bar Styling */
+.announcement-bar {
+  background-color: #d47a86; /* Soft matching pink tone */
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Header Styling */
+.site-header {
+  background-color: #faf5f6; /* Light aesthetic background */
+  border-bottom: 1px solid #ead7db;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styling */
+.nav-logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3b2d2f;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links Styling */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5c494c;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d47a86;
+}
+
+/* Right Icons Styling */
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #3b2d2f;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #d47a86;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Aap mobile menu ke liye toggle add kar sakti hain */
+  }
+  .nav-container {
+    padding: 15px 20px;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+<div class="announcement-bar">
+  <p>✨ Free Delivery over Rs. 3000! Shop Now ✨</p>
+</div>
+
+<!-- Main Navigation Bar -->
+<header class="site-header">
+  <div class="nav-container">
+    <!-- Logo / Brand Name -->
+    <div class="nav-logo">
+      <a href="#">Lucky Scoop <span>🍦</span></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Right Icons (Search, Wishlist, Cart) -->
+    <div class="nav-icons">
+      <a href="#" aria-label="Search">🔍</a>
+      <a href="#" aria-label="Cart">🛒 <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+    <!-- 1. Mobile Banner -->
+    <div class="mobile-banner-container">
+        <img src="qw.jpeg" alt="Welcome to my page banner">
+        <div class="banner-overlay">
+            <a href="#shop" class="banner-btn">Explore Collection</a>
+        </div>
+    </div>
+
+     <!-- 4. Moving Sticker Line -->
+    <div class="sticker-ticker">
+        <div class="ticker-track">
+            <span class="sticker-item">✨ Special Gifts</span>
+            <span class="sticker-item">💖 Customized Boxes</span>
+            <span class="sticker-item">☕ Cozy Vibes</span>
+            <span class="sticker-item">🎀 Best Quality</span>
+            <span class="sticker-item">📦 Fast Delivery</span>
+            
+            <span class="sticker-item">✨ Special Gifts</span>
+            <span class="sticker-item">💖 Customized Boxes</span>
+            <span class="sticker-item">☕ Cozy Vibes</span>
+            <span class="sticker-item">🎀 Best Quality</span>
+            <span class="sticker-item">📦 Fast Delivery</span>
+        </div>
+    </div>
+
+    
+
+    <!-- 3. 4 Aesthetic Pink Cards Grid Section -->
+    <div class="pink-cards-grid-section">
+        <div class="pink-cards-grid">
+            <a href="#" class="pink-card-item">
+                <span class="pink-card-text">Best Sellers</span>
+            </a>
+            <a href="#" class="pink-card-item">
+                <span class="pink-card-text">Sale</span>
+            </a>
+            <a href="#" class="pink-card-item">
+                <span class="pink-card-text">New Arrivals</span>
+            </a>
+            <a href="#" class="pink-card-item">
+                <span class="pink-card-text">All Items</span>
+            </a>
+        </div>
+    </div>
+
+   
+
+    <!-- 5. Features Section -->
+    <div class="features-section">
+        <div class="feature-box">
+            <div class="feature-icon">🚚</div>
+            <div class="feature-text">
+                <h4>Free Shipping</h4>
+                <p>On all orders over $50</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">⭐</div>
+            <div class="feature-text">
+                <h4>High Quality</h4>
+                <p>Premium quality products</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-text">
+                <h4>Easy Returns</h4>
+                <p>30 days money back</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-text">
+                <h4>Secure Payment</h4>
+                <p>100% secure checkout</p>
+            </div>
+        </div>
+    </div>
+
+   <!-- 6. Shop By Category -->
+<div class="category-section">
+    <div class="section-title">Shop By Category</div>
+    <div class="category-scroll">
+        <a href="skincare.html" class="category-item">
+            <div class="category-circle"><img src="doll24.jpg" alt="Skincare"></div>
+            <p class="category-name">Blush</p>
+            <p class="category-shop">Shop Now →</p>
+        </a>
+        <a href="makeup.html" class="category-item">
+            <div class="category-circle"><img src="doll34.jpg" alt="Makeup"></div>
+            <p class="category-name">Eyeshades</p>
+            <p class="category-shop">Shop Now →</p>
+        </a>
+        <a href="haircare.html" class="category-item">
+            <div class="category-circle"><img src="doll52.jpg" alt="Haircare"></div>
+            <p class="category-name">Stationary</p>
+            <p class="category-shop">Shop Now →</p>
+        </a>
+        <a href="accessories.html" class="category-item">
+            <div class="category-circle"><img src="doll47.jpg" alt="Accessories"></div>
+            <p class="category-name">Accessories</p>
+            <p class="category-shop">Shop Now →</p>
+        </a>
+    </div>
+</div>
+
+
+    <!-- 2. About Me Laptop Desk Section -->
+    <div class="about-laptop-section">
+        <div class="about-header-tag">About Me ✿</div>
+        <h2 class="about-heading">I turn ideas into beautiful and impactful digital realities. ♡</h2>
+        
+        <div class="about-desk-img">
+            <img src="doll1.jpg" alt="Aesthetic Laptop Desk Setup">
+        </div>
+
+        <p class="about-desc">
+            I enjoy blending code with creativity to build web experiences that are not only functional but also delightful.
+        </p>
+        
+       
+
+        <div class="about-features-grid">
+            <div class="about-feat-item">
+                <div class="about-feat-icon">&lt;/&gt;</div>
+                <h4 class="about-feat-title">Development</h4>
+                <p class="about-feat-desc">Clean, efficient code that brings ideas to life.</p>
+            </div>
+            <div class="about-feat-item">
+                <div class="about-feat-icon">✨</div>
+                <h4 class="about-feat-title">UI/UX Design</h4>
+                <p class="about-feat-desc">Designing intuitive interfaces with love.</p>
+            </div>
+            <div class="about-feat-item">
+                <div class="about-feat-icon">📱</div>
+                <h4 class="about-feat-title">Responsive Design</h4>
+                <p class="about-feat-desc">Seamless experiences across all screens.</p>
+            </div>
+            <div class="about-feat-item">
+                <div class="about-feat-icon">💖</div>
+                <h4 class="about-feat-title">User Experience</h4>
+                <p class="about-feat-desc">Creating meaningful interactions that solve problems.</p>
+            </div>
+        </div>
+    </div>
+<!-- 7. Best Deals for You Section (10 Cards) -->
+<div class="products-section">
+    <div class="section-title">Best Deals for You 🔥</div>
+    <div class="product-scroll">
+        
+        <!-- Card 1 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('19 in 1 Makeup Deal', 'Rs 2650', 'doll2.webp', 'Rs 200', 'Yeh aik shandar aur mukammal makeup deal hai jo aapki khoobsurati mein mazeed izafa kare gi.')">
+            <span class="discount-badge">-20%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll2.webp" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">19 in 1 Makeup Deal</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 2650</p>
+                <p class="product-old-price">Rs 3000</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(123)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('19 in 1 Makeup Deal', 'Rs 2650', 'doll2.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('9 in 1 Makeup Deal', 'Rs 1650', 'doll3.webp', 'Rs 200', 'Yeh 9 in 1 deal rozana ke istemal ke liye aur halkay makeup ke liye behtareen hai.')">
+            <span class="discount-badge">-15%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll3.webp" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">9 in 1 Makeup Deal</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1650</p>
+                <p class="product-old-price">Rs 2000</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(98)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('9 in 1 Makeup Deal', 'Rs 1650', 'doll3.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('Ultimate Makeup Kit 20 Items for Women', 'Rs 2500', 'doll4.png', 'Rs 200', 'Ultimate makeup kit containing 20 essential items for women for professional looks.')">
+            <span class="discount-badge">-30%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll4.png" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">Ultimate Makeup Kit 20 Items for Women</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 2500</p>
+                <p class="product-old-price">Rs 3000</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(145)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('Ultimate Makeup Kit 20 Items for Women', 'Rs 2500', 'doll4.png')">Add to Cart</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('7-in-1 Makeup Set for Pakistani Women', 'Rs 1200', 'doll5.jpg', 'Rs 200', '7-in-1 makeup set specially curated keeping Pakistani weather and skin tones in mind.')">
+            <span class="discount-badge">-25%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll5.jpg" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">7-in-1 Makeup Set for Pakistani Women</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1200</p>
+                <p class="product-old-price">Rs 1500</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(176)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('7-in-1 Makeup Set for Pakistani Women', 'Rs 1200', 'doll5.jpg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('12 in 1 Makeup Set for Pakistani Women', 'Rs 1500', 'doll6.jpg', 'Rs 200', '12 in 1 makeup set for a gorgeous party and everyday look.')">
+            <span class="discount-badge">-20%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll6.jpg" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">12 in 1 Makeup Set for Pakistani Women</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1500</p>
+                <p class="product-old-price">Rs 1800</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(84)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('12 in 1 Makeup Set for Pakistani Women', 'Rs 1500', 'doll6.jpg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('15-in-1 Makeup Set for Pakistani Women', 'Rs 2000', 'doll11.jpeg', 'Rs 200', 'Complete 15-in-1 makeup set featuring all essential high quality products.')">
+            <span class="discount-badge">-35%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll11.jpeg" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">15-in-1 Makeup Set for Pakistani Women</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 2000</p>
+                <p class="product-old-price">Rs 2500</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(62)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('15-in-1 Makeup Set for Pakistani Women', 'Rs 2000', 'doll11.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('BNB Body & Body Rice Brightening Glow Kit 3-in-1 Glass Skin', 'Rs 1500', 'doll10.webp', 'Rs 200', 'BNB Rice Brightening Glow Kit for achieving flawless glass skin for all skin types.')">
+            <span class="discount-badge">-15%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll10.webp" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">BNB Body & Body Rice Brightening Glow Kit 3-in-1 Glass Skin for All Skin Types</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1500</p>
+                <p class="product-old-price">Rs 1800</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(51)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('BNB Body & Body Rice Brightening Glow Kit 3-in-1 Glass Skin', 'Rs 1500', 'doll10.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('12 in 1 Makeup Deal', 'Rs 1800', 'doll9.webp', 'Rs 200', 'Popular 12 in 1 makeup deal packed with trending cosmetics.')">
+            <span class="discount-badge">-20%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll9.webp" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">12 in 1 Makeup Deal</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1800</p>
+                <p class="product-old-price">Rs 2000</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(210)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('12 in 1 Makeup Deal', 'Rs 1800', 'doll9.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('8-in-1 Makeup Set for Pakistani Skin & Weather', 'Rs 1350', 'doll8.jpeg', 'Rs 200', '8-in-1 makeup set specially formulated to last long in Pakistani weather.')">
+            <span class="discount-badge">-10%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll8.jpeg" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">8-in-1 Makeup Set for Pakistani Skin & Weather</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 1350</p>
+                <p class="product-old-price">Rs 1800</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(40)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('8-in-1 Makeup Set for Pakistani Skin & Weather', 'Rs 1350', 'doll8.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="product-card" style="text-decoration: none; color: inherit; display: block; cursor: pointer;" onclick="viewProduct('11 in 1 Makeup Deal', 'Rs 2000', 'doll7.webp', 'Rs 200', 'Stunning 11 in 1 makeup deal offering top-notch items at a great value.')">
+            <span class="discount-badge">-25%</span>
+            <span class="wishlist-icon">♡</span>
+            <div class="product-img-box"><img src="doll7.webp" alt="Product" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="product-name">11 in 1 Makeup Deal</p>
+            <div class="product-price-box">
+                <p class="product-price">Rs 2000</p>
+                <p class="product-old-price">Rs 2500</p>
+            </div>
+            <div class="product-rating">★★★★★ <span>(115)</span></div>
+            <button class="large-card-btn" style="width: 100%; margin-top: 10px; padding: 8px; background: #ff4757; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="event.stopPropagation(); addToCart('11 in 1 Makeup Deal', 'Rs 2000', 'doll7.webp')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- 8. Our Promise Section -->
+<div class="our-promise-section">
+    <div class="section-title">Our Promise ✿</div>
+    <div class="promise-grid">
+        <div class="promise-item">
+            <div class="promise-icon-box">🚚</div>
+            <p class="promise-text">On-Time Delivery</p>
+        </div>
+        <div class="promise-item">
+            <div class="promise-icon-box">✏️</div>
+            <p class="promise-text">500+ Designs</p>
+        </div>
+        <div class="promise-item">
+            <div class="promise-icon-box">📅</div>
+            <p class="promise-text">2 Cr+ Orders</p>
+        </div>
+        <div class="promise-item">
+            <div class="promise-icon-box">🧁</div>
+            <p class="promise-text">Baked Fresh</p>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    <!-- 10. Two Promotional Banners Section -->
+    <div class="promo-banners-section">
+        <div class="promo-banner-card">
+            <div class="promo-tag">Special Offer</div>
+            <div class="promo-title">Up To 30% Off On Gift Boxes</div>
+            <div class="promo-img-box">
+                <img src="doll12.jpg" alt="Special Offer">
+            </div>
+            <a href="#" class="promo-btn">Shop Now</a>
+        </div>
+        <div class="promo-banner-card">
+            <div class="promo-tag">New Arrivals</div>
+            <div class="promo-title">Fresh & Trendy Collections</div>
+            <div class="promo-img-box">
+                <img src="doll13.jpg" alt="New Arrivals">
+            </div>
+            <a href="#" class="promo-btn">Discover</a>
+        </div>
+    </div>
+
+    <!-- 11. Cute Greeting Card -->
+    <div class="greeting-card-section">
+        <div class="greeting-img-box">
+            <img src="hii.jpeg" alt="Cute Hiii Cat">
+        </div>
+        <p class="greeting-text">Hope you have a great day! ✨💖</p>
+    </div>
+
+<!-- 12. Large Product Cards Section (10 Cards) -->
+<div class="large-cards-section">
+    <div class="section-title">All Collections 📦</div>
+    <div class="large-grid">
+        
+        <!-- Card 1 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Beaded bracelet', 'Rs 250', 'bracelet5.jpeg', 'Rs 200', 'Khoobsurat beaded bracelet jo aapke haath ki zeenat barha de.')">
+            <div class="large-card-img"><img src="bracelet5.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Beaded bracelet</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Beaded bracelet', 'Rs 250', 'bracelet5.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Beaded set', 'Rs 550', 'bracelet11.jpeg', 'Rs 200', 'Mukammal beaded set jo har outfit ke sath match kare.')">
+            <div class="large-card-img"><img src="bracelet11.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Beaded set</p>
+            <p class="large-card-price">Rs 550</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Beaded set', 'Rs 550', 'bracelet11.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Mascara', 'Rs 250', 'mascara.jpeg', 'Rs 200', 'Long-lasting aur voluminizing mascara lambi aur ghani palkon ke liye.')">
+            <div class="large-card-img"><img src="mascara.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Mascara</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Mascara', 'Rs 250', 'mascara.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Brush set', 'Rs 350', 'brush.jpeg', 'Rs 200', 'Professional makeup brush set jo flawless blending de.')">
+            <div class="large-card-img"><img src="brush.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Brush set</p>
+            <p class="large-card-price">Rs 350</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Brush set', 'Rs 350', 'brush.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Flower medium clip', 'Rs 100', 'clip.jpeg', 'Rs 200', 'Trendy flower medium hair clip baalon ke liye behtareen.')">
+            <div class="large-card-img"><img src="clip.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Flower medium clip</p>
+            <p class="large-card-price">Rs 100</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Flower medium clip', 'Rs 100', 'clip.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Eyeshades curler', 'Rs 350', 'makeup19.jpg', 'Rs 200', 'Eyelash curler jo aapki palkon ko khoobsurat curl de.')">
+            <div class="large-card-img"><img src="makeup19.jpg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Eyeshades curler</p>
+            <p class="large-card-price">Rs 350</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Eyeshades curler', 'Rs 350', 'makeup19.jpg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Coin pouches', 'Rs 250', 'doll14.jpeg', 'Rs 200', 'Cute aur handy coin pouch choti cheezein aur coins sambhalne ke liye.')">
+            <div class="large-card-img"><img src="doll14.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Coin pouches</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Coin pouches', 'Rs 250', 'doll14.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Strawberry lip balm', 'Rs 250', 'lip balm.jpeg', 'Rs 200', 'Moisturizing strawberry lip balm soft aur pink honton ke liye.')">
+            <div class="large-card-img"><img src="lip balm.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Strawberry lip balm</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Strawberry lip balm', 'Rs 250', 'lip balm.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Bioaqua face mask sheet', 'Rs 150', 'face mask.jpeg', 'Rs 200', 'Refreshing Bioaqua face mask sheet instant glow ke liye.')">
+            <div class="large-card-img"><img src="face mask.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Bioaqua face mask sheet</p>
+            <p class="large-card-price">Rs 150</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Bioaqua face mask sheet', 'Rs 150', 'face mask.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Hand cream', 'Rs 250', 'hand.jpeg', 'Rs 200', 'Nourishing hand cream soft aur mulayam haathon ke liye.')">
+            <div class="large-card-img"><img src="hand.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Hand cream</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Hand cream', 'Rs 250', 'hand.jpeg')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+// Yeh function aapke paas pehle se hoga, agar nahi toh isko page ke akhir mein rakh dein
+function viewProduct(name, price, img, delivery, desc) {
+    localStorage.setItem('prodName', name);
+    localStorage.setItem('prodPrice', price);
+    localStorage.setItem('prodImg', img);
+    localStorage.setItem('prodDelivery', delivery);
+    localStorage.setItem('prodDesc', desc);
+    window.location.href = 'product-detail.html';
+}
+</script>
+
+    <!-- 13. Aesthetic Banner Section (rt.jpg) -->
+    <div class="aesthetic-banner-section">
+        <img src="rt.jpg" alt="Aesthetic Tulips and Gift Banner">
+    </div>
+
+    <!-- 14. Spring Beauty Sale Strip -->
+    <div class="sale-banner-strip">
+        <h3>Spring Beauty Sale – Up to 30% Off</h3>
+    </div>
+
+    <!-- 15. Free Gift Banner Strip -->
+    <div class="free-gift-banner">
+        <h2>Free Gift on Orders Over $50</h2>
+        <a href="#" class="free-gift-btn">Shop Now</a>
+    </div>
+
+
+  <!-- 12. Large Product Cards Section (10 Cards) -->
+<div class="large-cards-section">
+    <div class="section-title">Handmade bracelets</div>
+    <div class="large-grid">
+        
+        <!-- Card 1 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('White bead bracelet', 'Rs 250', 'hand1.jpeg', 'Rs 200', 'Khoobsurat handmade white bead bracelet jo har outfit ke sath achha lagta hai.')">
+            <div class="large-card-img"><img src="hand1.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">White bead bracelet</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('White bead bracelet', 'Rs 250', 'hand1.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Charm bracelet', 'Rs 250', 'hand2.jpeg', 'Rs 200', 'Stylish charm bracelet jo aapke haath ki khoobsurati barha de.')">
+            <div class="large-card-img"><img src="hand2.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Charm bracelet</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Charm bracelet', 'Rs 250', 'hand2.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Cherry bracelet', 'Rs 280', 'hand3.jpeg', 'Rs 200', 'Cute aur unique cherry design handmade bracelet.')">
+            <div class="large-card-img"><img src="hand3.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Cherry bracelet</p>
+            <p class="large-card-price">Rs 280</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Cherry bracelet', 'Rs 280', 'hand3.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Friends magnet bracelet set', 'Rs 500', 'hand5.jpeg', 'Rs 200', 'Best friends ke liye special matching magnet bracelet set.')">
+            <div class="large-card-img"><img src="hand5.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Friends magnet bracelet set</p>
+            <p class="large-card-price">Rs 500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Friends magnet bracelet set', 'Rs 500', 'hand5.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Magnet bracelet', 'Rs 400', 'hand7.jpeg', 'Rs 200', 'Attractive magnet bracelet jo aapas mein jud jata hai.')">
+            <div class="large-card-img"><img src="hand7.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Magnet bracelet</p>
+            <p class="large-card-price">Rs 400</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Magnet bracelet', 'Rs 400', 'hand7.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Cute bracelet', 'Rs 200', 'hand10.jpeg', 'Rs 200', 'Simple aur pyara cute handmade bracelet daily wear ke liye.')">
+            <div class="large-card-img"><img src="hand10.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Cute bracelet</p>
+            <p class="large-card-price">Rs 200</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Cute bracelet', 'Rs 200', 'hand10.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Butterfly magnet bracelet', 'Rs 500', 'hand8.jpeg', 'Rs 200', 'Butterfly charm ke sath khoobsurat magnet bracelet pair.')">
+            <div class="large-card-img"><img src="hand8.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Butterfly magnet bracelet</p>
+            <p class="large-card-price">Rs 500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Butterfly magnet bracelet', 'Rs 500', 'hand8.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Pair bracelet', 'Rs 500', 'hand4.jpeg', 'Rs 200', 'Couples aur friends ke liye mukammal pair bracelet.')">
+            <div class="large-card-img"><img src="hand4.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Pair bracelet</p>
+            <p class="large-card-price">Rs 500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Pair bracelet', 'Rs 500', 'hand4.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Magnet heart bracelet', 'Rs 400', 'hand6.jpeg', 'Rs 200', 'Heart charm aur magnet wala special handmade bracelet.')">
+            <div class="large-card-img"><img src="hand6.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Magnet heart bracelet</p>
+            <p class="large-card-price">Rs 400</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Magnet heart bracelet', 'Rs 400', 'hand6.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Complete set', 'Rs 550', 'bracelet7.jpeg', 'Rs 200', 'Mukammal matching bracelets ka set jo gifting ke liye behtareen hai.')">
+            <div class="large-card-img"><img src="bracelet7.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Complete set</p>
+            <p class="large-card-price">Rs 550</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Complete set', 'Rs 550', 'bracelet7.jpeg')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+    <!-- 16. 4 Easy Steps Section -->
+    <div class="easy-steps-section">
+        <h3 class="easy-steps-title">Shop in 4 Easy Steps</h3>
+        <div class="steps-container">
+            <div class="steps-line"></div>
+            <div class="step-item">
+                <div class="step-icon-circle">🔍</div>
+                <h4 class="step-heading">Browse</h4>
+                <p class="step-desc">Explore collections</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon-circle">💖</div>
+                <h4 class="step-heading">Choose</h4>
+                <p class="step-desc">Pick favorites</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon-circle">🛍️</div>
+                <h4 class="step-heading">Order</h4>
+                <p class="step-desc">Secure checkout</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon-circle">🚚</div>
+                <h4 class="step-heading">Delivered</h4>
+                <p class="step-desc">At your doorstep</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. Why Girls Love Section -->
+    <div class="why-girls-love-section">
+        <p class="why-girls-subtitle">♡ reasons to shop ♡</p>
+        <h2 class="why-girls-title">Why Girls Love GiftVerse ♡</h2>
+        <ul class="why-girls-reasons">
+            <li>✔ Trendy & viral gifts</li>
+            <li>✔ Aesthetic packaging</li>
+            <li>✔ Perfect for every occasion</li>
+            <li>✔ Made with love 🎀</li>
+        </ul>
+       
+        
+        <div class="why-girls-scroll">
+            <div class="why-girls-card">
+                <div class="why-girls-card-img"><img src="deal.jpeg" alt="Unboxing"></div>
+                
+            </div>
+            <div class="why-girls-card">
+                <div class="why-girls-card-img"><img src="download.jpeg" alt="Packaging"></div>
+                
+            </div>
+            <div class="why-girls-card">
+                <div class="why-girls-card-img"><img src="download (1).jpeg" alt="Memories"></div>
+                
+            </div>
+            <div class="why-girls-card">
+                <div class="why-girls-card-img"><img src="makeup8.jpeg" alt="Perfect"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. Moving Sticker Line (Last Ticker) -->
+    <div class="sticker-ticker">
+        <div class="ticker-track">
+            <span class="sticker-item">✨ Special Gifts</span>
+            <span class="sticker-item">💖 Customized Boxes</span>
+            <span class="sticker-item">☕ Cozy Vibes</span>
+            <span class="sticker-item">🎀 Best Quality</span>
+            <span class="sticker-item">📦 Fast Delivery</span>
+            
+            <span class="sticker-item">✨ Special Gifts</span>
+            <span class="sticker-item">💖 Customized Boxes</span>
+            <span class="sticker-item">☕ Cozy Vibes</span>
+            <span class="sticker-item">🎀 Best Quality</span>
+            <span class="sticker-item">📦 Fast Delivery</span>
+        </div>
+    </div>
+
+
+  <!-- 12. Large Product Cards Section (10 Cards) -->
+<div class="large-cards-section">
+    <div class="section-title">All Collections 📦</div>
+    <div class="large-grid">
+        
+        <!-- Card 1 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Twinkle eraser', 'Rs 250', 'twinkle.jpeg', 'Rs 200', 'Cute aur stylish twinkle eraser jo bachon aur stationery lovers ke liye perfect hai.')">
+            <div class="large-card-img"><img src="twinkle.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Twinkle eraser</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Twinkle eraser', 'Rs 250', 'twinkle.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Makeup puff', 'Rs 200', 'puff.jpeg', 'Rs 200', 'Soft aur fluffy makeup puff flawless foundation blending ke liye.')">
+            <div class="large-card-img"><img src="puff.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Makeup puff</p>
+            <p class="large-card-price">Rs 200</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Makeup puff', 'Rs 200', 'puff.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('eyelashes', 'Rs 150', 'makeup7.jpeg', 'Rs 200', 'Natural looking reusable eyelashes jo aapki ankhon ko khubsurat banayein.')">
+            <div class="large-card-img"><img src="makeup7.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">eyelashes</p>
+            <p class="large-card-price">Rs 150</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('eyelashes', 'Rs 150', 'makeup7.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Eyeshades pallete', 'Rs 500', 'Rose Bomb🌹💥.jpeg', 'Rs 200', 'Rich pigmentation wali beautiful eyeshades palette stunning eye makeup ke liye.')">
+            <div class="large-card-img"><img src="Rose Bomb🌹💥.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Eyeshades pallete</p>
+            <p class="large-card-price">Rs 500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Eyeshades pallete', 'Rs 500', 'Rose Bomb🌹💥.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('J. pen perfume', 'Rs 250', 'pocket1.jpeg', 'Rs 200', 'Pocket-friendly J. pen perfume jo lambe waqt tak khushbu de.')">
+            <div class="large-card-img"><img src="pocket1.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">J. pen perfume</p>
+            <p class="large-card-price">Rs 250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('J. pen perfume', 'Rs 250', 'pocket1.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Diamond painting', 'Rs 150', 'paint.jpeg', 'Rs 200', 'Relaxing aur creative diamond painting kit art lovers ke liye.')">
+            <div class="large-card-img"><img src="paint.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Diamond painting</p>
+            <p class="large-card-price">Rs 150</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Diamond painting', 'Rs 150', 'paint.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Organizer box', 'Rs 450', 'paint2.jpeg', 'Rs 200', 'Utility organizer box jo aapka saman saaf suthra aur mehfooz rakhe.')">
+            <div class="large-card-img"><img src="paint2.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Organizer box</p>
+            <p class="large-card-price">Rs 450</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Organizer box', 'Rs 450', 'paint2.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Mini wipes', 'Rs 150', 'paint4.jpeg', 'Rs 200', 'Handy mini wipes jo travel aur quick fresh-up ke liye behtareen hain.')">
+            <div class="large-card-img"><img src="paint4.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Mini wipes</p>
+            <p class="large-card-price">Rs 150</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Mini wipes', 'Rs 150', 'paint4.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Stationary set', 'Rs 300', 'paint6.jpeg', 'Rs 200', 'Cute aur complete stationary set gifting aur daily use ke liye.')">
+            <div class="large-card-img"><img src="paint6.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Stationary set</p>
+            <p class="large-card-price">Rs 300</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Stationary set', 'Rs 300', 'paint6.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Paper soap', 'Rs 80', 'paper soaps.jpeg', 'Rs 200', 'Portable travel-friendly paper soaps jo safai ka khayal rakhein.')">
+            <div class="large-card-img"><img src="paper soaps.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Paper soap</p>
+            <p class="large-card-price">Rs 80</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Paper soap', 'Rs 80', 'paper soaps.jpeg')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+    <!-- 19. Cute Doll Image Section -->
+    <div class="doll-image-section">
+        <div class="doll-img-box">
+            <img src="doll.jpg" alt="Aesthetic Cute Doll with flowers">
+        </div>
+    </div>
+
+    <!-- 20. Two Large Promotional Banners Section -->
+    <div class="large-promo-banners-section">
+        <!-- Banner 1 -->
+        <div class="large-promo-banner">
+            <div class="large-promo-img">
+                <img src="doll15.jpg" alt="Exclusive Collection Banner">
+            </div>
+            <div class="large-promo-content">
+                <div class="large-promo-tag">Limited Edition ✿</div>
+                <h3 class="large-promo-heading">Discover Our Exclusive Gift Boxes</h3>
+                <p class="large-promo-desc">Handcrafted with love and premium items to make every special moment unforgettable.</p>
+                <a href="#" class="large-promo-btn">Shop Collection →</a>
+            </div>
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="large-promo-banner">
+            <div class="large-promo-img">
+                <img src="rt.jpg" alt="Special Seasonal Offer Banner">
+            </div>
+            <div class="large-promo-content">
+                <div class="large-promo-tag">Special Savings ✨</div>
+                <h3 class="large-promo-heading">Get Flat 30% Off On Everything</h3>
+                <p class="large-promo-desc">Upgrade your gifting experience with our seasonal favorites and trending aesthetics.</p>
+                <a href="#" class="large-promo-btn">Claim Discount →</a>
+            </div>
+        </div>
+    </div>
+
+<!-- 12. Large Product Cards Section (10 Cards) -->
+<div class="large-cards-section">
+    <div class="section-title">All Collections 📦</div>
+    <div class="large-grid">
+        
+        <!-- Card 1 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('DIY Jewellery Beads for Jewelry Making Items', 'Rs 1500', 'doll16.webp', 'Rs 200', 'Creative DIY jewellery beads set jo aapko apne pasand ki jewelry khud banane ki saulat deta hai.')">
+            <div class="large-card-img"><img src="doll16.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">DIY Jewellery Beads for Jewelry Making Items</p>
+            <p class="large-card-price">Rs 1500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('DIY Jewellery Beads for Jewelry Making Items', 'Rs 1500', 'doll16.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Trending Elegant Gold-Plated Stainless Steel Bangle Bracelet for Girls & Women with Elegant Design', 'Rs 500', 'doll17.webp', 'Rs 200', 'Trending elegant gold-plated stainless steel bangle bracelet girls aur women ke liye.')">
+            <div class="large-card-img"><img src="doll17.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Trending Elegant Gold-Plated Stainless Steel Bangle Bracelet for Girls & Women with Elegant Design</p>
+            <p class="large-card-price">Rs 500</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Trending Elegant Gold-Plated Stainless Steel Bangle Bracelet for Girls & Women with Elegant Design', 'Rs 500', 'doll17.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Black Hip-Hop Rings Set of 6 Alloy', 'Rs 650', 'doll18.jpeg', 'Rs 200', 'Stylish black hip-hop rings ka set of 6 alloy material mein.')">
+            <div class="large-card-img"><img src="doll18.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Black Hip-Hop Rings Set of 6 Alloy</p>
+            <p class="large-card-price">Rs 650</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Black Hip-Hop Rings Set of 6 Alloy', 'Rs 650', 'doll18.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Silicone Dish Washing Gloves Multicolor Kitchen Cleaning', 'Rs 750', 'doll19.webp', 'Rs 200', 'Multicolor silicone dish washing gloves kitchen cleaning ko asaan banate hain.')">
+            <div class="large-card-img"><img src="doll19.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Silicone Dish Washing Gloves Multicolor Kitchen Cleaning</p>
+            <p class="large-card-price">Rs 750</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Silicone Dish Washing Gloves Multicolor Kitchen Cleaning', 'Rs 750', 'doll19.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Double Side Silicone Suction Phone Holder Pack of 5 Black', 'Rs 850', 'doll20.webp', 'Rs 200', 'Double side silicone suction phone holder pack of 5, hands-free use ke liye.')">
+            <div class="large-card-img"><img src="doll20.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Double Side Silicone Suction Phone Holder Pack of 5 Black</p>
+            <p class="large-card-price">Rs 850</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Double Side Silicone Suction Phone Holder Pack of 5 Black', 'Rs 850', 'doll20.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Affordable And Effective Solution Iron Table Stand', 'Rs 1250', 'doll21.webp', 'Rs 200', 'Affordable aur effective iron table stand kapron ki press ko asaan banaye.')">
+            <div class="large-card-img"><img src="doll21.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Affordable And Effective Solution Iron Table Stand</p>
+            <p class="large-card-price">Rs 1250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Affordable And Effective Solution Iron Table Stand', 'Rs 1250', 'doll21.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Wireless BT Mini Thermal Printer White Pink for Students & Offices', 'Rs 3250', 'doll22.jpg', 'Rs 200', 'Wireless BT mini thermal printer students aur office use ke liye behtareen.')">
+            <div class="large-card-img"><img src="doll22.jpg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Wireless BT Mini Thermal Printer White Pink for Students & Offices</p>
+            <p class="large-card-price">Rs 3250</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Wireless BT Mini Thermal Printer White Pink for Students & Offices', 'Rs 3250', 'doll22.jpg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Mini Desk Lamp for Student Dormitory & Reading Night', 'Rs 750', 'doll23.webp', 'Rs 200', 'Mini desk lamp student dormitory aur night reading ke liye perfect light deti hai.')">
+            <div class="large-card-img"><img src="doll23.webp" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Mini Desk Lamp for Student Dormitory & Reading Night</p>
+            <p class="large-card-price">Rs 750</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Mini Desk Lamp for Student Dormitory & Reading Night', 'Rs 750', 'doll23.webp')">Add to Cart</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Stationary set', 'Rs 300', 'paint6.jpeg', 'Rs 200', 'Cute aur complete stationary set gifting aur daily use ke liye.')">
+            <div class="large-card-img"><img src="paint6.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Stationary set</p>
+            <p class="large-card-price">Rs 300</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Stationary set', 'Rs 300', 'paint6.jpeg')">Add to Cart</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="large-card" style="text-decoration: none; color: inherit; cursor: pointer;" onclick="viewProduct('Paper soap', 'Rs 80', 'paper soaps.jpeg', 'Rs 200', 'Portable travel-friendly paper soaps jo safai ka khayal rakhein.')">
+            <div class="large-card-img"><img src="paper soaps.jpeg" alt="Item" style="width:100%; height:100%; object-fit:cover;"></div>
+            <p class="large-card-title">Paper soap</p>
+            <p class="large-card-price">Rs 80</p>
+            <button class="large-card-btn" onclick="event.stopPropagation(); addToCart('Paper soap', 'Rs 80', 'paper soaps.jpeg')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+    <!-- 21. Final 5 Customer Reviews Section -->
+    <div class="reviews-section">
+        <div class="section-title">Loved by Thousands ✨</div>
+        <div class="reviews-scroll">
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Incredible quality! The packaging looks even prettier in real life. 10/10 recommend!"</p>
+                </div>
+                <div>
+                    <p class="review-author">Mahnoor Ali</p>
+                    <p class="review-verified">✓ Verified Buyer</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Ordered a customized box for my best friend's birthday and she literally cried of happiness! 🥹💖"</p>
+                </div>
+                <div>
+                    <p class="review-author">Sana Tariq</p>
+                    <p class="review-verified">✓ Verified Buyer</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Such a seamless shopping experience. Received my order safely and on time. Thank you so much! 🌸"</p>
+                </div>
+                <div>
+                    <p class="review-author">Nimra Ahmed</p>
+                    <p class="review-verified">✓ Verified Buyer</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The aesthetics, the cute notes, the quality—everything is just top notch. Absolutely obsessed! ✨"</p>
+                </div>
+                <div>
+                    <p class="review-author">Komal Shah</p>
+                    <p class="review-verified">✓ Verified Buyer</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Best gifting site ever! Every single product feels like it was put together with pure love. 🎀"</p>
+                </div>
+                <div>
+                    <p class="review-author">Laiba Sheikh</p>
+                    <p class="review-verified">✓ Verified Buyer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. Frequently Asked Questions (FAQ) Section -->
+    <div class="faq-section">
+        <div class="section-title">Got Questions? We've Got Answers 💭</div>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How long does shipping take? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Orders are typically processed within 24-48 hours. Standard delivery takes around 3 to 5 business days right to your doorstep! 🚚
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I customize the gift boxes? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, absolutely! You can choose your favorite items, packaging colors, and even add a custom handwritten greeting note for your loved ones. 💖
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Are the products safe for sensitive skin? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    All our skincare and beauty items are 100% authentic, dermatologically tested, and suitable for all skin types. ✨
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What is your return policy? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    We offer a hassle-free 30-day return policy on unused and unopened items in their original packaging. 🔄
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How can I track my order? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Once your order is shipped, you'll receive a tracking link via email or SMS so you can monitor your package in real-time. 📦
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 23. Why Choose Lucky Scoop Section (Added at the Very Last) -->
+    <div class="why-choose-section">
+        <div class="section-title">Why Choose Lucky Scoop? ✨</div>
+        <div class="why-choose-grid">
+            <div class="why-choose-item">
+                <div class="why-choose-icon">🎁</div>
+                <h4 class="why-choose-heading">Handpicked Surprises</h4>
+                <p class="why-choose-desc">Every scoop is packed with curated items just for you.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="why-choose-icon">🎀</div>
+                <h4 class="why-choose-heading">Aesthetic Packaging</h4>
+                <p class="why-choose-desc">Beautiful presentation that makes every unboxing magical.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="why-choose-icon">💯</div>
+                <h4 class="why-choose-heading">100% Premium Quality</h4>
+                <p class="why-choose-desc">Only the highest quality products selected with love.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="why-choose-icon">💖</div>
+                <h4 class="why-choose-heading">Made with Care</h4>
+                <p class="why-choose-desc">Prepared attentively to bring a smile to your face.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <!-- Column 1: Brand Info -->
+    <div class="footer-col brand-col">
+      <h2>Lucky Scoop 🍦</h2>
+      <p>Aesthetic gifts and customized boxes, handpicked and packed with love — because every scoop should feel lucky.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Icon 1">🎁</a>
+        <a href="#" aria-label="Icon 2">🛍️</a>
+        <a href="#" aria-label="Icon 3">📌</a>
+        <a href="#" aria-label="Icon 4">💬</a>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h3>QUICK LINKS</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Us -->
+    <div class="footer-col">
+      <h3>CONTACT US</h3>
+      <ul class="contact-list">
+        <li>📍 Rawalpindi, Pakistan</li>
+        <li>📞 +92 300-0000000</li>
+        <li>✉️ hello@luckyscoop.com</li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Stay Updated -->
+    <div class="footer-col newsletter-col">
+      <h3>STAY UPDATED</h3>
+      <form class="footer-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 Lucky Scoop. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <span>•</span>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+    <!-- JavaScript for Interactive FAQ Accordion -->
+    <script>
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Close other items
+            allItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+
+        
+function viewProduct(name, price, img, delivery, desc) {
+    localStorage.setItem('prodName', name);
+    localStorage.setItem('prodPrice', price);
+    localStorage.setItem('prodImg', img);
+    localStorage.setItem('prodDelivery', delivery);
+    localStorage.setItem('prodDesc', desc);
+    window.location.href = 'product-detail.html';
+}
+
+<!-- Aapka baaki ka HTML code -->
+
+    
+        // Aapke baaki ke JavaScript functions yahan honge...
+
+        // Product ko Cart mein add karne ka function (Yeh wala code yahan aakhri mein paste kar dein)
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+            let existingProduct = cart.find(item => item.name === name);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: numericPrice,
+                    img: img,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert('Product successfully Cart mein add ho gaya hai! 🛒');
+        }
+
+        // 1. Yeh function cart ke items gin kar upar number theek kar deta hai
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let countElements = document.querySelectorAll('.cart-count');
+    countElements.forEach(el => {
+        el.innerText = cart.length;
+    });
+}
+
+// 2. Yeh function product ko cart mein save karta hai aur count update karta hai
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: name, price: price, image: image });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    updateCartCount(); // Yahan count update ho raha hai
+    
+    alert(name + " successfully cart mein add ho gaya hai! 🎉");
+}
+
+// 3. Jaise hi page khulega, yeh purane items gin kar count 0 se theek kar dega
+window.addEventListener('DOMContentLoaded', () => {
+    updateCartCount();
+});
+    
+
+    </script>
+
+</body>
+</html>

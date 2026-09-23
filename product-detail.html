@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Home Aura</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; padding: 20px; }
+        .container { max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-wrap: wrap; overflow: hidden; }
+        .product-image-section { flex: 1; min-width: 300px; padding: 30px; text-align: center; }
+        .product-image-section img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; }
+        .product-details-section { flex: 1; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-title { font-size: 26px; font-weight: 700; margin-bottom: 15px; color: #222; }
+        .current-price { font-size: 24px; font-weight: 700; color: #d9534f; margin-bottom: 15px; }
+        .description { font-size: 15px; color: #555; margin-bottom: 25px; }
+        .delivery-info { font-size: 14px; color: #007bff; margin-bottom: 20px; font-weight: 600; }
+        .btn-group { display: flex; gap: 15px; }
+        .btn { flex: 1; padding: 12px 20px; font-size: 16px; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; }
+        .add-to-cart { background-color: #fff; color: #333; border: 2px solid #333; }
+        .buy-now { background-color: #222; color: #fff; }
+        .back-link { display: inline-block; text-decoration: none; color: #666; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+
+    <div class="container">
+        <div class="product-image-section">
+            <img src="" alt="Product" id="detail-img">
+        </div>
+        <div class="product-details-section">
+            <div>
+                <h1 class="product-title" id="detail-title"></h1>
+                <div class="current-price" id="detail-price"></div>
+                <div class="delivery-info" id="detail-delivery"></div>
+                <p class="description" id="detail-desc"></p>
+            </div>
+            <div class="btn-group">
+                <button class="btn add-to-cart" onclick="alert('Added to cart!')">Add to Cart</button>
+                <button class="btn buy-now" onclick="goToCheckout()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Load karna
+        document.getElementById('detail-title').innerText = localStorage.getItem('prodName') || 'Product Name';
+        document.getElementById('detail-price').innerText = localStorage.getItem('prodPrice') || 'Rs 0';
+        document.getElementById('detail-img').src = localStorage.getItem('prodImg') || 'qw.jpeg';
+        document.getElementById('detail-desc').innerText = localStorage.getItem('prodDesc') || 'Yeh aik behtareen product hai.';
+        document.getElementById('detail-delivery').innerText = 'Delivery Charges: ' + (localStorage.getItem('prodDelivery') || 'Rs 200');
+
+        function goToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

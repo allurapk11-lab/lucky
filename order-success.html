@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful - Home Aura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .success-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        .success-icon {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .order-id {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        .home-btn {
+            display: inline-block;
+            background-color: #222;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .home-btn:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-card">
+        <div class="success-icon">✓</div>
+        <h1>Order Placed Successfully!</h1>
+        <p>Shukriya! Aapka order mil gaya hai. Hum jald hi aapko call ya WhatsApp par order confirm karenge.</p>
+        
+        <div class="order-id">
+            Order ID: <strong>#HA-<span id="rand-id"></span></strong>
+        </div>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+    </div>
+
+    <script>
+        // Random Order ID generate karne ke liye chota sa script
+        document.getElementById('rand-id').innerText = Math.floor(100000 + Math.random() * 900000);
+    </script>
+
+</body>
+</html>
